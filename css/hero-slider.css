@@ -692,16 +692,16 @@ Javascript disabled
 
 
 
-
 .shaded-box {
-  background-color: rgb(0 0 0 / 57%);
-  padding: 20px;
+  border: 2px solid white;
+  background-color: rgba(0, 0, 0, 0.84);
+  padding: 2px;
   border-radius: 0px;
-  box-shadow: 7px 9px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 7px 9px 8px rgba(0, 0, 0, 0.30);
   color: white;
-  max-width: 121%;
-  width: 419px;
-  margin: 23px auto;
+  max-width: 105%;
+  width: 318px;
+  margin: 31px auto;
 }
 
 
@@ -728,3 +728,5 @@ Javascript disabled
   margin-left: -189px;
   margin-top: -20px;
 }
+
+

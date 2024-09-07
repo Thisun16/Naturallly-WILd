@@ -15,7 +15,7 @@ ul {
 	list-style: none;
 }
 p {
-	color: #5a5a5a;
+	color: #000000;
 	font-size: 13px;
 	letter-spacing: 0.25px;
 	line-height: 24px;
@@ -66,6 +66,9 @@ p {
 	margin: 0 auto;
 }
 .header {
+    display: flex;
+    justify-content: space-between; /* Align items with space between them */
+    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
@@ -74,11 +77,10 @@ p {
     z-index: 10000;
     transition: all 0.2s ease-in-out;
     height: 80px;
-    background-color:black;  
-    
+    background-color: black;  
     text-align: center;
-    line-height: 40px;
 }
+
 
 .navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav>li>a {
     text-shadow: none;
@@ -101,7 +103,7 @@ p {
 }
 
 .navbar-nav>li {
-	margin-left: 45px;
+	 margin: 0 15px;
 }
 
 .header.active .navbar-nav>li>a {
@@ -118,6 +120,8 @@ p {
     -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
 }
+
+
 .navbar-brand .logo{
 	margin-top: -26px;
 	margin-left: -409px;
@@ -190,9 +194,8 @@ p {
 }
 
 .page-section2 {
-    padding: 80px 0;
-	
-	height: 900px;
+	padding: 80px 0;
+    height: auto; /* Remove fixed height */
 
 }	
 .navbar-inverse .navbar-toggle {
@@ -204,6 +207,7 @@ p {
 	background-color: #a2cf8d;
 }
 bootstrap.min.css:5
+
 .navbar-toggle {
     position: relative;
     float: right;
@@ -216,6 +220,8 @@ bootstrap.min.css:5
     border: 1px solid transparent;
     border-radius: 4px;
 }
+
+
 @media (min-width: 768px) {
     .header .navbar-brand {
         padding-left: 0;
@@ -1087,11 +1093,12 @@ body.lb-disable-scrolling {
 		background-color: rgba(250, 250, 250, 0.95);
 		box-shadow: 0px 5px 10px #cdcdcd;
 	}
-	.navbar-nav {
-		padding: 0px;
-		margin-top: 0px;
-		margin-top: 0px;
-	}
+.navbar-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+}
 	.navbar-nav>li {
 		margin-left: 0px;
 		border-bottom: 1px solid #eee;
@@ -1113,6 +1120,23 @@ body.lb-disable-scrolling {
 	.cd-hero .slide-caption h2 {
 		font-size: 28px;
 	}
+
+	.About-us-container {
+        flex-direction: column; /* Stack the text and video */
+        align-items: center;
+    }
+
+    .About-us {
+		margin-bottom: 20px;
+        max-width: 100%; /* Text takes full width */
+    }
+
+    .youtube-player {
+        max-width: 100%; /* Make sure the video takes full width on smaller screens */
+    }
+	.youtube-player iframe {
+        height: auto;
+    }
 }
 
 
@@ -1148,27 +1172,17 @@ body.lb-disable-scrolling {
 
 
 
-/* CSS */
+/* Styling for YouTube player */
 .youtube-player {
-    max-width:1039px; /* Ensures the player is responsive */
-	height: 616px; 
-    margin: 0 auto; /* Centers the player horizontally */
-    padding: 10px;  /* Adds some padding around the player */
-   
-   
-    overflow: hidden; /* Prevents overflow of rounded corners */
-    margin-right: 60px;
-    margin-top: -560px;
+    flex: 1;
+    max-width: 60%; /* Expand the width of the video */
+	
 }
 
 .youtube-player iframe {
-	width: 1020px;
-    height: 597px;
-  
+    width: 100%;
+    height: 450px; /* Increase the height for a bigger video */
 }
-
-
-
 
 /* CSS */
 .content-wrapper2 {
@@ -1186,26 +1200,25 @@ body.lb-disable-scrolling {
 
 
 
-
 .About-us {
-	width: 400px;
-    height: 509px;
-    margin: 0 auto;
-    padding: 20px;
-  
-    color: #000000;
+    flex: 1;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 26px;
+    font-size: 29px;
     line-height: 1.6;
+    color: #000;
     text-align: justify;
-    border-radius: 5px;
-   
-    margin-left: 195px;
-    margin-top: 97px;
+    max-width: 40%; /* Further reduce the text width to allow more space for the video */
 }
 
-
-
+.About-us-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    max-width: 1623px;
+    margin: 31px auto;
+    gap: 87px;
+}
 
 
 
@@ -1363,3 +1376,93 @@ body.lb-disable-scrolling {
     font-style: normal;
     margin: 10px 0;
 }
+
+
+
+
+/* Style the dropdown container */
+.custom-dropdown {
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center;
+    background-color: #000;
+    padding: 10px;
+    position: relative;
+}
+
+/* Logo container */
+.logo-container {
+    display: flex;
+}
+
+.logo-image {
+    height: 60px;
+}
+
+/* Hide the dropdown items initially */
+.nav-menu {
+    display: none;
+    position: absolute;
+    top: 79px;
+    right: -424px;
+    background-color: #080000;
+    width: 317px;
+    /* border-radius: 5px; */
+    box-shadow: 0px 8px 16px rgb(0 0 0 / 41%);
+}
+
+
+.nav-menu.active div{
+
+	background-color: black;
+}
+
+/* Menu button (hamburger icon) for laptop view */
+.menu-toggle {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+	margin-right: -391px;
+    margin-top: 11px;
+}
+
+.menu-toggle .bar {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* When scrolled, change hamburger lines to black */
+.menu-toggle.scrolled .bar {
+    background-color: #000;
+}
+/* List items styling */
+.menu-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-list li {
+    padding: 10px;
+    text-align: left; /* Align text to the left */
+}
+
+.menu-list li a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu-list li:hover {
+    background-color: #555;
+}
+
+/* Show dropdown when active */
+.nav-menu.active {
+    display: block;
+}
+
+
