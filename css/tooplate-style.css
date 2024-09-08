@@ -207,6 +207,7 @@ p {
 	background-color: #a2cf8d;
 }
 bootstrap.min.css:5
+
 .navbar-toggle {
     position: relative;
     float: right;
@@ -219,6 +220,8 @@ bootstrap.min.css:5
     border: 1px solid transparent;
     border-radius: 4px;
 }
+
+
 @media (min-width: 768px) {
     .header .navbar-brand {
         padding-left: 0;
@@ -913,7 +916,7 @@ body.lb-disable-scrolling {
 
 .lb-outerContainer {
   position: relative;
-  *zoom: 1;
+  zoom: 1;
   width: 250px;
   height: 250px;
   margin: 0 auto;
@@ -1011,7 +1014,7 @@ body.lb-disable-scrolling {
 .lb-dataContainer {
   margin: 0 auto;
   padding-top: 5px;
-  *zoom: 1;
+  zoom: 1;
   width: 100%;
   -moz-border-radius-bottomleft: 4px;
   -webkit-border-bottom-left-radius: 4px;
@@ -1124,8 +1127,9 @@ body.lb-disable-scrolling {
     }
 
     .About-us {
-		margin-bottom: 20px;
-        max-width: 100%; /* Text takes full width */
+        margin-bottom: 20px;
+        max-width: 100%;  /* Ensure it takes full width on mobile */
+        font-size: 17px;  /* Adjust text size for mobile */
     }
 
     .youtube-player {
@@ -1134,7 +1138,37 @@ body.lb-disable-scrolling {
 	.youtube-player iframe {
         height: auto;
     }
+
+	.cd-hero-slider .cd-full-width  { 
+
+		margin-left: 10px;
+	}
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media (max-width: 1015px){
@@ -1377,15 +1411,6 @@ body.lb-disable-scrolling {
 
 
 
-/* Style the dropdown container */
-.custom-dropdown {
-    display: flex;
-    justify-content: flex-end; /* Align items to the right */
-    align-items: center;
-    background-color: #000;
-    padding: 10px;
-    position: relative;
-}
 
 /* Logo container */
 .logo-container {
@@ -1400,10 +1425,10 @@ body.lb-disable-scrolling {
 .nav-menu {
     display: none;
     position: absolute;
-    top: 79px;
-    right: -424px;
+    top: 89px;
+    right: -64px;
     background-color: #080000;
-    width: 317px;
+    width: 181px;
     /* border-radius: 5px; */
     box-shadow: 0px 8px 16px rgb(0 0 0 / 41%);
 }
@@ -1416,13 +1441,15 @@ body.lb-disable-scrolling {
 
 /* Menu button (hamburger icon) for laptop view */
 .menu-toggle {
-    cursor: pointer;
+	cursor: pointer;
     display: flex;
     flex-direction: column;
     justify-content: center;
-	margin-right: -391px;
-    margin-top: 11px;
+    /* margin-right: -391px; */
+
+    color: white;
 }
+
 
 .menu-toggle .bar {
     width: 30px;
@@ -1462,4 +1489,21 @@ body.lb-disable-scrolling {
     display: block;
 }
 
+
+.page-section2-head{
+	text-align: center;
+	font-size: 17px;
+	text-transform: uppercase;
+	font-weight: 700;
+	color: #121212;
+}
+
+
+.page-section-head{
+	text-align: center;
+	font-size: 17px;
+	text-transform: uppercase;
+	font-weight: 700;
+	color: #ffffff;
+}
 

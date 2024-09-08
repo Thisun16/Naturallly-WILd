@@ -730,3 +730,15 @@ Javascript disabled
 }
 
 
+
+
+
+@media (max-width: 768px){
+
+.cd-hero-slider li{
+
+  margin-left: 10px;
+}
+
+
+}
