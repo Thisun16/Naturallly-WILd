@@ -207,7 +207,6 @@ p {
 	background-color: #a2cf8d;
 }
 bootstrap.min.css:5
-
 .navbar-toggle {
     position: relative;
     float: right;
@@ -220,8 +219,6 @@ bootstrap.min.css:5
     border: 1px solid transparent;
     border-radius: 4px;
 }
-
-
 @media (min-width: 768px) {
     .header .navbar-brand {
         padding-left: 0;
